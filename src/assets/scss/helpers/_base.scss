@@ -1,0 +1,91 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+.btn{
+  &:focus,
+  &:focus-within{
+    box-shadow: none;
+    outline: 0;
+  }
+}
+.btn-text{
+  border: none;
+}
+.form-control,
+input{
+  &:focus,
+  &:focus-within{
+    box-shadow: none;
+    outline: 0;
+  }
+}
+a{
+  text-decoration: none;
+  color: $link-color;
+  cursor: pointer;
+
+  &.active,
+  &:hover{
+    text-decoration: underline;
+    text-decoration-color: $link-color;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+  }
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: $heading-font;
+}
+body{
+  font-family: $base-font;
+  background-color: $base-bg;
+  color: $base-color;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $base-color $base-color;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $base-color
+}
+/* Handle on hover */
+*::-webkit-scrollbar-thumb {
+  background: $base-color;
+  border-radius: 5px;
+}
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: $base-color;
+}
+.row{
+  --bs-gutter-x: 1.5rem;
+  @include breakpoint(sm){
+    --bs-gutter-x: 0.8rem;
+  }
+}
