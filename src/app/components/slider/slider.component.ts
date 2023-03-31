@@ -14,6 +14,7 @@ export class SliderComponent implements OnInit{
   ngOnInit(): void {
     this.getMovieSlider()
   }
+  image_path = this.service.IMG_PATH;
   getMovieSlider(){
     this.service.homeSlider().subscribe(result => {
       console.log(result, 'result');

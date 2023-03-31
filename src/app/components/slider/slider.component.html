@@ -1,7 +1,7 @@
 <div id="carouselExample" class="carousel slide">
     <div class="carousel-inner">
       <div class="carousel-item" *ngFor="let item of movieResults; let i = index" [ngClass]="{ active: i === 1}">
-        <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt="move">
+        <img src="{{this.image_path}}{{item.poster_path}}" alt="move">
         <div class="content">
             <h3>{{item.title}}</h3>
             <p>{{item.overview}}</p>
