@@ -11,22 +11,21 @@ import { SearchService } from 'src/app/services/search.service';
 })
 export class SearchComponent implements OnInit {
   movieResults: any = [];
+  isLoader: any = false;
   constructor( private service: SearchService){}
   ngOnInit(): void {
     this.onSubmit()
   }
 
   searchMovie = new FormGroup({
-    'movieName': new FormControl(null)
+    'movieName': new FormControl('')
   })
 
   onSubmit(){
     console.log(this.searchMovie.value, 'Submit Value');
-    
+    this.isLoader = true;
     this.service.getSearch(this.searchMovie.value).subscribe((result)=>{
-
-      console.log(result, '#SearchResult');
-      
+      this.isLoader = false;
       this.movieResults = result.results;
 
     })

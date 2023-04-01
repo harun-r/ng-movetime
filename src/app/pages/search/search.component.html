@@ -3,7 +3,7 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <form class="d-flex" [formGroup]="searchMovie" (ngSubmit)="onSubmit()">
-                    <input class="form-control me-2" formControlName="movieName" placeholder="Search">
+                    <input class="form-control me-2"  formControlName="movieName" placeholder="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
@@ -12,9 +12,11 @@
 </div>
 
 <div class="p-5">
-    <div *ngIf="movieResults.length < 1" class="search-empty p-5">
-        <h3 class="display-2 text-white text-center">No Movie Founds</h3>
+    
+    <div class="movie-laoder" *ngIf="isLoader">
+        <h3 class="display-2 text-white text-center">Loading.....</h3>
     </div>
+    
     <div *ngIf="movieResults.length > 0" class="movie-lists">
         <div class="container">
             <div class="row">
@@ -30,5 +32,8 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div *ngIf="movieResults.length < 1" class="search-empty p-5">
+        <h3 class="display-2 text-white text-center">No Movie Founds</h3>
     </div>
 </div>

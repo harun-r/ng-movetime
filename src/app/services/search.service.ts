@@ -12,6 +12,7 @@ export class SearchService {
   API_KEY = 'b08827e5775601663b9da08181e2cb24';
 
   getSearch(data:any):Observable<any>{
+    console.log('data', data)
     return this.http.get(`${this.BASE_URL}/search/movie?api_key=${this.API_KEY}&query=${data.movieName}`)
   }
 }
