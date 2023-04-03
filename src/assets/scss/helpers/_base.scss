@@ -1,6 +1,5 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&family=Lato:wght@100;300;400;700;900&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -62,21 +61,21 @@ body{
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: $base-color $base-color;
+  scrollbar-color: #ddd #ccc;
 }
 
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 3px;
+  height: 3px;
 }
 
 *::-webkit-scrollbar-track {
-  background: $base-color
+  background: #ddd
 }
 /* Handle on hover */
 *::-webkit-scrollbar-thumb {
-  background: $base-color;
+  background: #ccc;
   border-radius: 5px;
 }
 /* Handle on hover */

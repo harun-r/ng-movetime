@@ -9,8 +9,12 @@ $heading-font: $montserrat;
 $white:       #F8F8F8;
 $black:       #2F3335;
 $black-01:    #222222;
-$cyan:         #333;
 //Secondary color
+
+$dark-blue:   #130f40;
+$dark-blue-01:#0c0927;
+
+$blue: #22a6b3;
 
 
 $grey-01:    #F2F4F3;
@@ -20,6 +24,6 @@ $grey-04:    #4D5353;
 $grey-05:    #3F3F40;
 
 //System Color
-$base-bg:     $black-01;
-$base-color:  $grey-04;
-$link-color:  $cyan;
+$base-bg:     $dark-blue;
+$base-color:  $dark-blue;
+$link-color:  $dark-blue;
